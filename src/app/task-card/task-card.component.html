@@ -1,0 +1,25 @@
+<!-- CHILD COMPONENT -->
+
+<div class="card h-100">
+  <img [src]="currentTask.image" class="card-img-top w-100 h-50" alt="..." />
+  <div class="card-body">
+    @if(currentTask.is_done){
+    <span class="badge text-bg-success">Done</span>
+    }@else {
+    <span class="badge text-bg-secondary">not yet</span>
+    }
+    
+    <h5 class="card-title">
+      {{ currentTask.title}}
+    </h5>
+    
+    <p class="card-text">{{ currentTask.description }}</p>
+   
+    <button class="btn btn-danger" (click)="deleteTask(currentTask.id)">Delete</button>
+    
+  </div>
+  <div class="card-footer">
+   Deadline: {{currentTask.endDate}}
+  </div>
+  
+</div>

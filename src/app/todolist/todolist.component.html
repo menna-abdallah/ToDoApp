@@ -1,0 +1,13 @@
+<div class="row row-cols-1 row-cols-md-2 ">
+    @for (todo of InputFromParent; track InputFromParent; let i = $index) {
+        <div class="todo border border-dark d-flex">
+            <input class = " checkbox mr-2" type="checkbox" (change)="update(i)"/>
+            <div class="flex-grow-1 p-1 fw-bold " [style.textDecoration]="todo.done ? 'line-through' : 'none'">
+                {{todo.name}}
+            </div>
+            <button class="p-1 bg-danger border-0 rounded-2 m-1 " (click)="deleteTodo(i)">Delete</button>
+        </div>
+    }
+</div>
+
+

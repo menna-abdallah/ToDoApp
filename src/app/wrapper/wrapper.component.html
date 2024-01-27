@@ -1,0 +1,4 @@
+<div class="d-flex pt-5 m-auto w-50 flex-column border">
+    <app-todoform (newTodo)="insertTodo($event)"></app-todoform>
+    <app-todolist [InputFromParent]="todos"></app-todolist>
+</div>
