@@ -1,4 +1,6 @@
 import { Component, Input } from '@angular/core';
+import tasks from '../../assets/Tasks.json';
+
 
 @Component({
   selector: 'app-todolist',
@@ -8,7 +10,7 @@ import { Component, Input } from '@angular/core';
   styleUrl: './todolist.component.css'
 })
 export class TodolistComponent {
-
+  alltask : any = tasks;
   @Input() InputFromParent: any;
 
   deleteTodo(index : number) {
