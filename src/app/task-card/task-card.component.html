@@ -4,16 +4,16 @@
   <img [src]="currentTask.image" class="card-img-top w-100 h-50" alt="..." />
   <div class="card-body">
     @if(currentTask.is_done){
-    <span class="badge text-bg-success">Done</span>
+    <span class="badge text-bg-success m-2">Done</span>
     }@else {
-    <span class="badge text-bg-secondary">not yet</span>
+    <span class="badge text-bg-secondary m-2">not yet</span>
     }
     
-    <h5 class="card-title">
+    <h5 class="card-title m-2">
       {{ currentTask.title}}
     </h5>
     
-    <p class="card-text">{{ currentTask.description }}</p>
+    <p class="card-text m-2">{{ currentTask.description }}</p>
    
     <button class="btn btn-danger" (click)="deleteTask(currentTask.id)">Delete</button>
     

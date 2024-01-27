@@ -1,12 +1,12 @@
 <!-- PARENT COMPONENT -->
-<h1 class="m-5">Your current Tasks</h1>
+<h1 class="m-4">More Details</h1>
 <hr />
 <div class="form-outline md-3 w-25 m-auto border-1 border-black ">
     <input type="text" class="form-control mb-3" (change)="findtask(inpVal.value)" placeholder="search" #inpVal >
-    <button class="btn btn-secondary" type="button" (click)="resetSearch()" *ngIf="matched.length < dataTasks.length">Reset Search</button>
+    <button class="btn btn-secondary mb-3" type="button" (click)="resetSearch()" *ngIf="matched.length < dataTasks.length">Reset Search</button>
   </div>
 
-<div class="row row-cols-1 row-cols-md-6 g-4">
+<div class="row row-cols-1 row-cols-md-3 g-4">
   
       @for(task of matched; track task.id){
         <div class="col">

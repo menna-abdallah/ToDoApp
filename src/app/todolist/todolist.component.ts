@@ -15,7 +15,7 @@ export class TodolistComponent {
     this.InputFromParent.splice(index, 1);
   }
   update(index: number) {
-    this.InputFromParent[index].done = !this.InputFromParent[index].done;
+    this.InputFromParent[index].is_done = !this.InputFromParent[index].is_done;
   }
 }
 
